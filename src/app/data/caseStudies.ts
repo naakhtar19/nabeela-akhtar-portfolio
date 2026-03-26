@@ -229,38 +229,5 @@ export const caseStudies: CaseStudyData[] = [
     accentColor: "#10B981", // Emerald
     bgSecondary: "#F0FDF4"
   },
-  {
-    id: "e-commerce-wellness",
-    title: "PureFlow Wellness",
-    category: "Mobile App",
-    summary: "An e-commerce experience centered on sustainability and organic products.",
-    imageUrl: "https://images.unsplash.com/photo-1512314889357-e157c22f938d?q=80&w=1080",
-    overview: "A holistic approach to wellness shopping, focusing on ethical sourcing and minimalist design.",
-    problem: "Consumers found it hard to verify the sustainability of their purchases.",
-    solution: "Integrated a transparency-first product page with detailed sourcing information.",
-    impact: "25% increase in conversion rates for sustainable product lines.",
-    role: "Product Designer",
-    timeline: "8 weeks",
-    tools: ["Figma", "Webflow", "Spline"],
-    gridSize: "small",
-    accentColor: "#F59E0B", // Amber
-    bgSecondary: "#FFFBEB"
-  },
-  {
-    id: "travel-planner-ai",
-    title: "RoamFree AI",
-    category: "UX Research",
-    summary: "AI-powered travel planning that learns from user preferences to create unique itineraries.",
-    imageUrl: "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=1080",
-    overview: "Developing an AI travel assistant that moves beyond generic recommendations.",
-    problem: "Travelers spent hours cross-referencing reviews and maps.",
-    solution: "A generative AI interface that curates itineraries in real-time based on live data.",
-    impact: "Reduced planning time by an average of 3 hours per trip.",
-    role: "UX Researcher",
-    timeline: "14 weeks",
-    tools: ["Dovetail", "Maze", "Figma"],
-    gridSize: "small",
-    accentColor: "#3B82F6", // Blue
-    bgSecondary: "#EFF6FF"
-  }
+
 ];
