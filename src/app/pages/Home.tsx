@@ -378,13 +378,13 @@ export function Home() {
             </svg>
           </motion.div>
           
-          <motion.h1 
-            variants={item}
-            className="font-serif font-medium mb-8 leading-[1.05] tracking-tight text-[78px] text-[#2A180E]"
-          >
-            Crafting digital <br />
-            <span className="italic text-[#432A18]/40">human</span> experiences.
-          </motion.h1>
+  <motion.h1
+  variants={item}
+  className="font-serif font-medium mb-8 leading-[1.05] tracking-tight text-[78px] text-[#2A180E]"
+  >
+  Design that <br />
+  <span className="italic text-[#432A18]/40">solves</span> problems.
+  </motion.h1>
           
           <motion.p 
             variants={item}
