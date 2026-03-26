@@ -357,7 +357,8 @@ const DatsCaseStudy = ({ caseStudy }: { caseStudy: any }) => {
               <p className="text-xl text-black/70 leading-relaxed font-light">After interviews, an importance survey ranked 18 identified needs on a 1–5 scale using Ulrich & Eppinger's technique.              </p>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-16">
+            <div className="flex justify-center mb-16">
+              <div className="w-full max-w-2xl">
               <div className="relative flex justify-center">
                 <style>
                   {`
@@ -412,6 +413,7 @@ const DatsCaseStudy = ({ caseStudy }: { caseStudy: any }) => {
                     </div>
                   ))}
                 </Slider>
+              </div>
               </div>
             </div>
 
