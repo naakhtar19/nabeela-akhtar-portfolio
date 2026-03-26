@@ -302,7 +302,7 @@ export function Home() {
             animate={{ y: [0, -8, 0], rotate: [0, 5, 0] }}
             transition={{ y: { duration: 3.5, repeat: Infinity, ease: "easeInOut", delay: 0.2 }, rotate: { duration: 5, repeat: Infinity, ease: "easeInOut" } }}
           >
-            <svg viewBox="0 0 24 24" className="w-full h-full drop-shadow-sm opacity-70 group-hover:opacity-100 transition-all duration-300 group-hover:drop-shadow-[0_0_10px_rgba(200,90,23,0.6)]" fill="none">
+            <svg viewBox="0 0 512 512" className="w-full h-full drop-shadow-sm opacity-70 group-hover:opacity-100 transition-all duration-300 group-hover:drop-shadow-[0_0_10px_rgba(200,90,23,0.6)]">
               <defs>
                 <linearGradient id="sparkleGradient" x1="0%" y1="0%" x2="100%" y2="100%">
                   <stop offset="0%" stopColor="#C85A17" />
@@ -310,20 +310,18 @@ export function Home() {
                   <stop offset="100%" stopColor="#9e5b29" />
                 </linearGradient>
                 <filter id="sparkleGlow">
-                  <feGaussianBlur stdDeviation="1.5" result="coloredBlur"/>
+                  <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
                   <feMerge>
                     <feMergeNode in="coloredBlur"/>
                     <feMergeNode in="SourceGraphic"/>
                   </feMerge>
                 </filter>
               </defs>
-              {/* Four-pointed sparkle */}
+              {/* Four-pointed sparkle matching glitter-2.svg */}
               <path 
-                d="M12 0 L13.5 10.5 L24 12 L13.5 13.5 L12 24 L10.5 13.5 L0 12 L10.5 10.5 Z" 
+                d="M247.355,106.9C222.705,82.241,205.833,39.18,197.46,0c-8.386,39.188-25.24,82.258-49.899,106.917c-24.65,24.642-67.724,41.514-106.896,49.904c39.188,8.373,82.254,25.235,106.904,49.895c24.65,24.65,41.522,67.72,49.908,106.9c8.373-39.188,25.24-82.258,49.886-106.917c24.65-24.65,67.724-41.514,106.896-49.904C315.08,148.422,272.014,131.551,247.355,106.9z" 
                 fill="url(#sparkleGradient)" 
-                stroke="#432A18" 
-                strokeWidth="0.5"
-                className="group-hover:filter group-hover:[filter:url(#sparkleGlow)] transition-all duration-300"
+                className="group-hover:[filter:url(#sparkleGlow)] transition-all duration-300"
               />
             </svg>
           </motion.div>
