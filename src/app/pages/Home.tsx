@@ -293,24 +293,38 @@ export function Home() {
             <span className="text-[11px] font-bold tracking-[0.2em] uppercase text-[#432A18] group-hover:text-[#FDFBF7] transition-colors duration-300 select-none">Sip & Solve</span>
           </motion.div>
 
-          {/* Object 5: Star Anise (Hover Element) */}
+          {/* Object 5: Sparkle (Hover Element) */}
           <motion.div
             className="absolute top-[22%] right-[10%] w-10 h-10 cursor-grab active:cursor-grabbing pointer-events-auto z-20 group"
             drag dragConstraints={{ left: -200, right: 800, top: -400, bottom: 400 }} dragElastic={0.2}
             whileDrag={{ scale: 1.2, rotate: 45, zIndex: 50 }}
-            whileHover={{ scale: 1.2, rotate: 15 }}
+            whileHover={{ scale: 1.3, rotate: 15 }}
             animate={{ y: [0, -8, 0], rotate: [0, 5, 0] }}
             transition={{ y: { duration: 3.5, repeat: Infinity, ease: "easeInOut", delay: 0.2 }, rotate: { duration: 5, repeat: Infinity, ease: "easeInOut" } }}
           >
-            <svg viewBox="0 0 100 100" className="w-full h-full drop-shadow-sm opacity-60 group-hover:opacity-100 group-hover:drop-shadow-lg transition-all duration-300">
-              <path d="M50 10 L58 38 L85 28 L65 50 L85 72 L58 62 L50 90 L42 62 L15 72 L35 50 L15 28 L42 38 Z" fill="#9e5b29" stroke="#5c3a21" strokeWidth="2" strokeLinejoin="round"/>
-              <circle cx="50" cy="50" r="10" fill="#5c3a21" />
-              <circle cx="50" cy="22" r="2" fill="#3a1e0b" />
-              <circle cx="72" cy="33" r="2" fill="#3a1e0b" />
-              <circle cx="72" cy="67" r="2" fill="#3a1e0b" />
-              <circle cx="50" cy="78" r="2" fill="#3a1e0b" />
-              <circle cx="28" cy="67" r="2" fill="#3a1e0b" />
-              <circle cx="28" cy="33" r="2" fill="#3a1e0b" />
+            <svg viewBox="0 0 24 24" className="w-full h-full drop-shadow-sm opacity-70 group-hover:opacity-100 transition-all duration-300 group-hover:drop-shadow-[0_0_12px_rgba(212,175,55,0.8)]" fill="none">
+              <defs>
+                <linearGradient id="sparkleGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stopColor="#D4AF37" />
+                  <stop offset="50%" stopColor="#F4E4A6" className="group-hover:animate-pulse" />
+                  <stop offset="100%" stopColor="#C5A028" />
+                </linearGradient>
+                <filter id="sparkleGlow">
+                  <feGaussianBlur stdDeviation="1" result="coloredBlur"/>
+                  <feMerge>
+                    <feMergeNode in="coloredBlur"/>
+                    <feMergeNode in="SourceGraphic"/>
+                  </feMerge>
+                </filter>
+              </defs>
+              <path 
+                d="M12 2L13.09 8.26L18 6L14.74 10.91L21 12L14.74 13.09L18 18L13.09 15.74L12 22L10.91 15.74L6 18L9.26 13.09L3 12L9.26 10.91L6 6L10.91 8.26L12 2Z" 
+                fill="url(#sparkleGradient)" 
+                stroke="#B8960C" 
+                strokeWidth="0.5"
+                filter="url(#sparkleGlow)"
+                className="group-hover:fill-[#FFD700] transition-all duration-300"
+              />
             </svg>
           </motion.div>
 
