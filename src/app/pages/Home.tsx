@@ -504,7 +504,7 @@ export function Home() {
             viewport={{ once: true }}
             transition={{ duration: 1, type: "spring", stiffness: 50 }}
           >
-            <h2 className="text-5xl md:text-9xl font-serif mb-10 tracking-tight text-[#2A180E]">
+            <h2 className="text-4xl md:text-7xl font-serif mb-10 tracking-tight text-[#2A180E]">
               Let's craft <br />
               something <span className="italic text-[#432A18]/20">together</span>.
             </h2>
