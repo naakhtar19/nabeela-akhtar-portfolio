@@ -302,28 +302,28 @@ export function Home() {
             animate={{ y: [0, -8, 0], rotate: [0, 5, 0] }}
             transition={{ y: { duration: 3.5, repeat: Infinity, ease: "easeInOut", delay: 0.2 }, rotate: { duration: 5, repeat: Infinity, ease: "easeInOut" } }}
           >
-            <svg viewBox="0 0 24 24" className="w-full h-full drop-shadow-sm opacity-70 group-hover:opacity-100 transition-all duration-300 group-hover:drop-shadow-[0_0_12px_rgba(212,175,55,0.8)]" fill="none">
+            <svg viewBox="0 0 24 24" className="w-full h-full drop-shadow-sm opacity-70 group-hover:opacity-100 transition-all duration-300 group-hover:drop-shadow-[0_0_10px_rgba(200,90,23,0.6)]" fill="none">
               <defs>
                 <linearGradient id="sparkleGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stopColor="#D4AF37" />
-                  <stop offset="50%" stopColor="#F4E4A6" className="group-hover:animate-pulse" />
-                  <stop offset="100%" stopColor="#C5A028" />
+                  <stop offset="0%" stopColor="#C85A17" />
+                  <stop offset="50%" stopColor="#E8A87C" />
+                  <stop offset="100%" stopColor="#9e5b29" />
                 </linearGradient>
                 <filter id="sparkleGlow">
-                  <feGaussianBlur stdDeviation="1" result="coloredBlur"/>
+                  <feGaussianBlur stdDeviation="1.5" result="coloredBlur"/>
                   <feMerge>
                     <feMergeNode in="coloredBlur"/>
                     <feMergeNode in="SourceGraphic"/>
                   </feMerge>
                 </filter>
               </defs>
+              {/* Four-pointed sparkle */}
               <path 
-                d="M12 2L13.09 8.26L18 6L14.74 10.91L21 12L14.74 13.09L18 18L13.09 15.74L12 22L10.91 15.74L6 18L9.26 13.09L3 12L9.26 10.91L6 6L10.91 8.26L12 2Z" 
+                d="M12 0 L13.5 10.5 L24 12 L13.5 13.5 L12 24 L10.5 13.5 L0 12 L10.5 10.5 Z" 
                 fill="url(#sparkleGradient)" 
-                stroke="#B8960C" 
+                stroke="#432A18" 
                 strokeWidth="0.5"
-                filter="url(#sparkleGlow)"
-                className="group-hover:fill-[#FFD700] transition-all duration-300"
+                className="group-hover:filter group-hover:[filter:url(#sparkleGlow)] transition-all duration-300"
               />
             </svg>
           </motion.div>
