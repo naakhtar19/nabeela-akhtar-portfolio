@@ -212,22 +212,6 @@ export const caseStudies: CaseStudyData[] = [
       }
     }
   },
-  {
-    id: "collaborative-workspace",
-    title: "Collaborative Workspace",
-    category: "SaaS Platform",
-    summary: "Building a seamless collaboration platform for remote design teams to ideate and iterate.",
-    imageUrl: "https://images.unsplash.com/photo-1548094947-945812120092?q=80&w=1080",
-    overview: "Created a collaborative workspace platform designed specifically for remote design teams.",
-    problem: "Remote design teams struggled with fragmented tools and version control issues.",
-    solution: "I designed an integrated workspace that combines design tools, commenting, and version history.",
-    impact: "Teams reported 35% faster project completion times.",
-    role: "Senior UX Designer",
-    timeline: "16 weeks",
-    tools: ["Figma", "Miro", "Dovetail", "ProtoPie"],
-    gridSize: "medium",
-    accentColor: "#10B981", // Emerald
-    bgSecondary: "#F0FDF4"
-  },
+
 
 ];
