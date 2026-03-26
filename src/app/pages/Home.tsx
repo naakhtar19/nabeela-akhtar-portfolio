@@ -293,24 +293,36 @@ export function Home() {
             <span className="text-[11px] font-bold tracking-[0.2em] uppercase text-[#432A18] group-hover:text-[#FDFBF7] transition-colors duration-300 select-none">Sip & Solve</span>
           </motion.div>
 
-          {/* Object 5: Star Anise (Hover Element) */}
+          {/* Object 5: Sparkle (Hover Element) */}
           <motion.div
             className="absolute top-[22%] right-[10%] w-10 h-10 cursor-grab active:cursor-grabbing pointer-events-auto z-20 group"
             drag dragConstraints={{ left: -200, right: 800, top: -400, bottom: 400 }} dragElastic={0.2}
             whileDrag={{ scale: 1.2, rotate: 45, zIndex: 50 }}
-            whileHover={{ scale: 1.2, rotate: 15 }}
+            whileHover={{ scale: 1.3, rotate: 15 }}
             animate={{ y: [0, -8, 0], rotate: [0, 5, 0] }}
             transition={{ y: { duration: 3.5, repeat: Infinity, ease: "easeInOut", delay: 0.2 }, rotate: { duration: 5, repeat: Infinity, ease: "easeInOut" } }}
           >
-            <svg viewBox="0 0 100 100" className="w-full h-full drop-shadow-sm opacity-60 group-hover:opacity-100 group-hover:drop-shadow-lg transition-all duration-300">
-              <path d="M50 10 L58 38 L85 28 L65 50 L85 72 L58 62 L50 90 L42 62 L15 72 L35 50 L15 28 L42 38 Z" fill="#9e5b29" stroke="#5c3a21" strokeWidth="2" strokeLinejoin="round"/>
-              <circle cx="50" cy="50" r="10" fill="#5c3a21" />
-              <circle cx="50" cy="22" r="2" fill="#3a1e0b" />
-              <circle cx="72" cy="33" r="2" fill="#3a1e0b" />
-              <circle cx="72" cy="67" r="2" fill="#3a1e0b" />
-              <circle cx="50" cy="78" r="2" fill="#3a1e0b" />
-              <circle cx="28" cy="67" r="2" fill="#3a1e0b" />
-              <circle cx="28" cy="33" r="2" fill="#3a1e0b" />
+            <svg viewBox="0 0 512 512" className="w-full h-full drop-shadow-sm opacity-70 group-hover:opacity-100 transition-all duration-300 group-hover:drop-shadow-[0_0_10px_rgba(200,90,23,0.6)]">
+              <defs>
+                <linearGradient id="sparkleGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stopColor="#C85A17" />
+                  <stop offset="50%" stopColor="#E8A87C" />
+                  <stop offset="100%" stopColor="#9e5b29" />
+                </linearGradient>
+                <filter id="sparkleGlow">
+                  <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
+                  <feMerge>
+                    <feMergeNode in="coloredBlur"/>
+                    <feMergeNode in="SourceGraphic"/>
+                  </feMerge>
+                </filter>
+              </defs>
+              {/* Four-pointed sparkle matching glitter-2.svg */}
+              <path 
+                d="M247.355,106.9C222.705,82.241,205.833,39.18,197.46,0c-8.386,39.188-25.24,82.258-49.899,106.917c-24.65,24.642-67.724,41.514-106.896,49.904c39.188,8.373,82.254,25.235,106.904,49.895c24.65,24.65,41.522,67.72,49.908,106.9c8.373-39.188,25.24-82.258,49.886-106.917c24.65-24.65,67.724-41.514,106.896-49.904C315.08,148.422,272.014,131.551,247.355,106.9z" 
+                fill="url(#sparkleGradient)" 
+                className="group-hover:[filter:url(#sparkleGlow)] transition-all duration-300"
+              />
             </svg>
           </motion.div>
 
@@ -366,13 +378,13 @@ export function Home() {
             </svg>
           </motion.div>
           
-          <motion.h1 
-            variants={item}
-            className="font-serif font-medium mb-8 leading-[1.05] tracking-tight text-[78px] text-[#2A180E]"
-          >
-            Crafting digital <br />
-            <span className="italic text-[#432A18]/40">human</span> experiences.
-          </motion.h1>
+  <motion.h1
+  variants={item}
+  className="font-serif font-medium mb-8 leading-[1.05] tracking-tight text-[78px] text-[#2A180E]"
+  >
+  Design that <br />
+  <span className="italic text-[#432A18]/40">solves</span> problems.
+  </motion.h1>
           
           <motion.p 
             variants={item}
@@ -504,7 +516,7 @@ export function Home() {
             viewport={{ once: true }}
             transition={{ duration: 1, type: "spring", stiffness: 50 }}
           >
-            <h2 className="text-5xl md:text-9xl font-serif mb-10 tracking-tight text-[#2A180E]">
+            <h2 className="text-4xl md:text-7xl font-serif mb-10 tracking-tight text-[#2A180E]">
               Let's craft <br />
               something <span className="italic text-[#432A18]/20">together</span>.
             </h2>

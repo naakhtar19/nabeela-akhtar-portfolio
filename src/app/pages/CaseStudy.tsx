@@ -357,8 +357,9 @@ const DatsCaseStudy = ({ caseStudy }: { caseStudy: any }) => {
               <p className="text-xl text-black/70 leading-relaxed font-light">After interviews, an importance survey ranked 18 identified needs on a 1–5 scale using Ulrich & Eppinger's technique.              </p>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-16">
-              <div className="relative">
+            <div className="flex justify-center mb-16">
+              <div className="w-full max-w-2xl">
+              <div className="relative flex justify-center">
                 <style>
                   {`
                     .slick-slider { position: relative; display: block; box-sizing: border-box; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; -webkit-touch-callout: none; -khtml-user-select: none; -ms-touch-action: pan-y; touch-action: pan-y; -webkit-tap-highlight-color: transparent; }
@@ -380,37 +381,39 @@ const DatsCaseStudy = ({ caseStudy }: { caseStudy: any }) => {
                     .slick-vertical .slick-slide { display: block; height: auto; border: 1px solid transparent; }
                     .slick-arrow.slick-hidden { display: none; }
                     
-                    .slick-dots { position: absolute; bottom: -30px; display: flex !important; justify-content: center; width: 100%; padding: 0; margin: 0; list-style: none; }
+                    .slick-dots { position: absolute; bottom: -20px; display: flex !important; justify-content: center; width: 100%; padding: 0; margin: 0; list-style: none; }
                     .slick-dots li { position: relative; display: inline-block; margin: 0 4px; padding: 0; cursor: pointer; width: auto; height: auto; }
                     .slick-dots li.slick-active div { background-color: ${accentColor} !important; transform: scale(1.2); }
                   `}
                 </style>
                 <Slider {...sliderSettings}>
                   {[
-                    { quote: "“There is a lot of complication about who needs what approval to see if it can even be purchased.”", author: "Participant 2, Faculty Member · Freeman Hall" },
-                    { quote: "“We have a number of computers in our inventory that are no longer with us, and we have probably no idea where they went. It slips through the cracks.”", author: "Participant 3, Director of CECAS" },
-                    { quote: "“I have my own spreadsheet with more details — warranty, device name, type of equipment. The current interface can't display things in a very organized way.”", author: "Participant 1, IT Services Specialist III" }
+                    { quote: "There is a lot of complication about who needs what approval to see if it can even be purchased.", author: "Participant 2, Faculty Member · Freeman Hall" },
+                    { quote: "We have a number of computers in our inventory that are no longer with us, and we have probably no idea where they went. It slips through the cracks.", author: "Participant 3, Director of CECAS" },
+                    { quote: "I have my own spreadsheet with more details — warranty, device name, type of equipment. The current interface can't display things in a very organized way.", author: "Participant 1, IT Services Specialist III" }
                   ].map((q, i) => (
-                    <div key={i} className="pb-4 pt-2 px-2">
-                      <div className="relative group bg-white p-8 md:p-10 rounded-3xl border border-black/5 hover:border-black/10 shadow-sm hover:shadow-xl hover:shadow-black/5 transition-all duration-500 overflow-hidden cursor-grab active:cursor-grabbing">
-                        <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-black/[0.03] to-transparent rounded-bl-full transform translate-x-8 -translate-y-8 group-hover:scale-110 transition-transform duration-700"></div>
-                        <div 
-                          className="absolute -left-2 top-4 text-8xl md:text-9xl opacity-10 font-serif leading-none select-none transition-transform duration-500 group-hover:-translate-y-2 group-hover:scale-110"
-                          style={{ color: accentColor }}
-                        >
-                          "
+                    <div key={i} className="pb-8 pt-2 px-1">
+                      <div className="relative group bg-white p-6 rounded-2xl border border-black/5 hover:border-black/10 shadow-sm hover:shadow-lg hover:shadow-black/5 transition-all duration-500 overflow-hidden cursor-grab active:cursor-grabbing">
+                        <div className="flex gap-4">
+                          {/* Quote accent bar */}
+                          <div 
+                            className="w-1 shrink-0 rounded-full"
+                            style={{ backgroundColor: `${accentColor}30` }}
+                          />
+                          <div className="flex-1 min-w-0">
+                            <blockquote className="text-lg leading-relaxed font-light text-black/80 italic mb-4">
+                              {`"${q.quote}"`}
+                            </blockquote>
+                            <cite className="text-[10px] font-bold uppercase tracking-[0.12em] not-italic text-black/50 block">
+                              {q.author}
+                            </cite>
+                          </div>
                         </div>
-                        <blockquote className="relative z-10 text-xl leading-relaxed font-light text-black/80 mb-8 italic pl-6 border-l-[3px]" style={{ borderColor: `${accentColor}40` }}>
-                          {q.quote}
-                        </blockquote>
-                        <cite className="relative z-10 text-[10px] font-bold uppercase tracking-[0.15em] not-italic flex items-center gap-4">
-                          <span className="w-6 h-[1px] bg-black/20"></span>
-                          <span className="text-black/60">{q.author}</span>
-                        </cite>
                       </div>
                     </div>
                   ))}
                 </Slider>
+              </div>
               </div>
             </div>
 
