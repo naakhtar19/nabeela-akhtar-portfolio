@@ -358,7 +358,7 @@ const DatsCaseStudy = ({ caseStudy }: { caseStudy: any }) => {
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-16">
-              <div className="relative">
+              <div className="relative flex justify-center">
                 <style>
                   {`
                     .slick-slider { position: relative; display: block; box-sizing: border-box; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; -webkit-touch-callout: none; -khtml-user-select: none; -ms-touch-action: pan-y; touch-action: pan-y; -webkit-tap-highlight-color: transparent; }
@@ -380,7 +380,7 @@ const DatsCaseStudy = ({ caseStudy }: { caseStudy: any }) => {
                     .slick-vertical .slick-slide { display: block; height: auto; border: 1px solid transparent; }
                     .slick-arrow.slick-hidden { display: none; }
                     
-                    .slick-dots { position: absolute; bottom: -30px; display: flex !important; justify-content: center; width: 100%; padding: 0; margin: 0; list-style: none; }
+                    .slick-dots { position: absolute; bottom: -20px; display: flex !important; justify-content: center; width: 100%; padding: 0; margin: 0; list-style: none; }
                     .slick-dots li { position: relative; display: inline-block; margin: 0 4px; padding: 0; cursor: pointer; width: auto; height: auto; }
                     .slick-dots li.slick-active div { background-color: ${accentColor} !important; transform: scale(1.2); }
                   `}
